@@ -15,6 +15,7 @@ URL:		http://www.diveintomark.org/projects/pytextile/
 %pyrequires_eq	python-modules
 BuildRequires:	python-devel >= 2.3
 BuildRequires:	rpm-pythonprov
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,13 +34,12 @@ wyt³uszczenie itp.)
 %setup -q -n %{module}-%{version}
 
 %build
-CFLAGS="%{rpmcflags}"
-export CLFAGS
 python setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{py_sitescriptdir}
+
 python setup.py install \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
