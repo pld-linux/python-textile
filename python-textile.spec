@@ -5,12 +5,12 @@
 Summary:	Humane Web Text Generator
 Summary(pl):	Konwerter czystego tekstu do HTML
 Name:		python-%{module}
-Version:	1.13
+Version:	2.0.4
 Release:	1
 License:	GNU
 Group:		Development/Languages/Python
-Source0:	http://dealmeida.net/code/%{module}-%{version}.tgz
-# Source0-md5:	08ba85593d36346b64120227d2e3d9c4
+Source0:	http://dealmeida.net/code/%{module}-%{version}.tar.gz
+# Source0-md5:	501d13a58d2439f4bb15111cdf191cf0
 URL:		http://www.diveintomark.org/projects/pytextile/
 %pyrequires_eq	python-modules
 BuildRequires:	python-devel >= 2.3
@@ -30,23 +30,23 @@ popularne znaczniki (np. _co¶_ oznacza podkre¶lenie, *co¶*
 wyt³uszczenie itp.)
 
 %prep
-%setup -q -n %{module}
+%setup -q -n %{module}-%{version}
 
 %build
-python -c "import compiler;compiler.compileFile('textile.py')"
-python -c "import compileall; compileall.compile_dir('yaml')"
+CFLAGS="%{rpmcflags}"
+export CLFAGS
+python setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{py_sitedir}{,/yaml}
-install %{module}.pyc $RPM_BUILD_ROOT%{py_sitedir}
-install yaml/*.py[co] $RPM_BUILD_ROOT%{py_sitedir}/yaml
+install -d $RPM_BUILD_ROOT%{py_sitescriptdir}
+python setup.py install \
+	--root=$RPM_BUILD_ROOT \
+	--optimize=2
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{py_sitedir}/*.py[co]
-%dir %{py_sitedir}/yaml
-%{py_sitedir}/yaml/*.py[co]
+%{py_sitescriptdir}/*.py[co]
