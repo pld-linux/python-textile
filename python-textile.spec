@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.python
 
-%define         module textile
+%define         module	textile
 
 Summary:	Humane Web Text Generator
 Summary(pl):	Konwerter czystego tekstu do HTML
