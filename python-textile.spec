@@ -12,7 +12,7 @@ Source0:	http://dealmeida.net/code/%{module}-%{version}.tar.gz
 # Source0-md5:	19ae07379e5986049b7d9a34ffcbf867
 URL:		http://www.diveintomark.org/projects/pytextile/
 %pyrequires_eq	python-modules
-BuildRequires:	python-devel >= 2.3
+BuildRequires:	python-devel >= 1:2.3
 BuildRequires:	rpm-pythonprov
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
