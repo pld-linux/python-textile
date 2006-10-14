@@ -8,9 +8,10 @@ Version:	2.0.10
 Release:	1
 License:	GNU
 Group:		Development/Languages/Python
+# new: http://cheeseshop.python.org/packages/source/t/textile/
 Source0:	http://dealmeida.net/code/%{module}-%{version}.tar.gz
 # Source0-md5:	19ae07379e5986049b7d9a34ffcbf867
-URL:		http://www.diveintomark.org/projects/pytextile/
+URL:		http://cheeseshop.python.org/pypi/textile
 %pyrequires_eq	python-modules
 BuildRequires:	python-devel >= 1:2.3
 BuildArch:	noarch
