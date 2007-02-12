@@ -2,7 +2,7 @@
 %define		module	textile
 
 Summary:	Humane Web Text Generator
-Summary(pl):	Konwerter czystego tekstu do HTML
+Summary(pl.UTF-8):   Konwerter czystego tekstu do HTML
 Name:		python-%{module}
 Version:	2.0.10
 Release:	1
@@ -23,11 +23,11 @@ Generator. It's main purpose is to convert plain text to HTML using
 popular markup (ie. _something_ means underline, *something* means
 emphasis etc.)
 
-%description -l pl
-PyTextile jest przepisan± do Pythona wersj± programu Textile. S≥uøy on
-do konwersji czystego tekstu do formatu HTML, wykorzystuj±c do tego
-popularne znaczniki (np. _co∂_ oznacza podkre∂lenie, *co∂*
-wyt≥uszczenie itp.)
+%description -l pl.UTF-8
+PyTextile jest przepisanƒÖ do Pythona wersjƒÖ programu Textile. S≈Çu≈ºy on
+do konwersji czystego tekstu do formatu HTML, wykorzystujƒÖc do tego
+popularne znaczniki (np. _co≈õ_ oznacza podkre≈õlenie, *co≈õ*
+wyt≈Çuszczenie itp.)
 
 %prep
 %setup -q -n %{module}-%{version}
