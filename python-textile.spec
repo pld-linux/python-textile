@@ -2,7 +2,7 @@
 %define		module	textile
 
 Summary:	Humane Web Text Generator
-Summary(pl.UTF-8):   Konwerter czystego tekstu do HTML
+Summary(pl.UTF-8):	Konwerter czystego tekstu do HTML
 Name:		python-%{module}
 Version:	2.0.10
 Release:	1
