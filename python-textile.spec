@@ -14,6 +14,8 @@ Source0:	http://dealmeida.net/code/%{module}-%{version}.tar.gz
 URL:		http://cheeseshop.python.org/pypi/textile
 %pyrequires_eq	python-modules
 BuildRequires:	python-devel >= 1:2.3
+BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
