@@ -5,7 +5,7 @@ Summary:	Humane Web Text Generator
 Summary(pl.UTF-8):	Konwerter czystego tekstu do HTML
 Name:		python-%{module}
 Version:	2.1.5
-Release:	1
+Release:	2
 License:	GNU
 Group:		Development/Languages/Python
 Source0:	http://pypi.python.org/packages/source/t/textile/%{module}-%{version}.tar.gz
