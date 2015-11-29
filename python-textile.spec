@@ -11,6 +11,7 @@ Group:		Development/Languages/Python
 Source0:	http://pypi.python.org/packages/source/t/textile/%{module}-%{version}.tar.gz
 # Source0-md5:	6e030e112eca1dafa1be84cf5575560d
 URL:		http://pypi.python.org/pypi/textile
+BuildRequires:	rpmbuild(macros) >= 1.710
 %pyrequires_eq	python-modules
 BuildRequires:	python-devel >= 1:2.3
 BuildRequires:	python-modules
